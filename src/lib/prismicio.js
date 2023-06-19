@@ -1,0 +1,60 @@
+import * as prismic from '@prismicio/client';
+
+const repoName = 'pleasantlivinghome'; // Fill in your repository name
+const accessToken = ''; // If your repository is private, add an access token
+
+// This defines how you will structure URL paths in your project.
+// Update the types to match the Custom Types in your project, and edit
+// the paths to match the folder-based routing in your project.
+const routes = [
+  {
+    type: 'page',
+    uid: 'home',
+    path: '/',
+  },
+  {
+    type: 'page',
+    path: '/:uid',
+  },
+  {
+    type: 'furniture',
+    path: '/furniture/:uid',
+  },
+  {
+    type: 'interior_design_listing',
+    path: '/interior-design',
+  },
+  {
+    type: 'project',
+    path: '/interior-design/:uid',
+  },
+  {
+    type: 'collection',
+    path: '/collection/:uid',
+  },
+  {
+    type: 'press_listing',
+    path: '/press',
+  },
+  {
+    type: 'press',
+    path: '/press/:uid',
+  },
+];
+
+const createClient = ({ request, fetch } = {}) => {
+  const clientOptions = {
+    fetch,
+    accessToken,
+    routes,
+  };
+  const client = prismic.createClient(repoName, clientOptions);
+
+  if (request) {
+    client.enableAutoPreviewsFromReq(request);
+  }
+
+  return client;
+};
+
+export default createClient;
