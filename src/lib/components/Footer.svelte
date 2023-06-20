@@ -1,25 +1,24 @@
 <script>
 	export let data;
 	import * as prismic from '@prismicio/client';
-	let footerItems = [];
-  const mainMenu = data.document.find((item) => item.uid === 'footer-menu');
-  if (mainMenu && mainMenu.data.items) {
-    footerItems = mainMenu.data.items;
-  }
+	export let date = new Date().getFullYear();
 </script>
 
 <footer class="main-footer">
 	<div class="container">
-		<nav>
-			{#if footerItems}
-				{#each footerItems as item}
+		<nav class="footer-menu">
+			{#if data.items}
+			<ul>
+				{#each data.items as item}
 					{#if item.link.url}
-						<a href={prismic.asLink(item.link)}>
+						<li><a href={prismic.asLink(item.link)}>
 							{item.name}
-						</a>
+						</a></li>
 					{/if}
 				{/each}
+			</ul>
 			{/if}
+			<span class="copy">&copy; {date} Pleasant Living Home</span>
 		</nav>
 	</div>
 </footer>
@@ -28,5 +27,23 @@
 .main-footer{
 	background:#efefef;
 	padding:30px 0;
+}
+.footer-menu{
+	text-align:center;
+}
+.footer-menu ul{
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	display:inline-block;
+}
+.footer-menu li,
+.copy{
+	display:inline-block;
+	font-size:12px;
+	margin:0 3px;
+}
+.footer-menu a,.copy{
+	padding:5px 10px;
 }
 </style>

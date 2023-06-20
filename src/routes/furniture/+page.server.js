@@ -5,12 +5,12 @@ import * as prismic from '@prismicio/client';
 export async function load({ fetch, params, request }) {
   const { uid } = params;
   const client = createClient({ fetch, request });
-  const document = await client.getByUID('page', 'interior-design');
+  const document = await client.getByUID('page', 'furniture');
 
-  const type = 'project'
+  const type = 'collection'
 
   const orderings = [{
-    field: 'my.project.title',
+    field: 'my.collection.title',
     direction: 'asc',
   }]
 

@@ -178,10 +178,17 @@ h6 {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin-top:0;
 }
 h1,
 h2 {
-  font-size: 2.4em;
+  font-size: 2em;
+}
+@media (min-width: 769px) {
+  h1,
+  h2 {
+    font-size: 2.4em;
+  }
 }
 h3 {
   font-size: 1.6em;
@@ -286,7 +293,6 @@ img {
 /* Header
 ---------------------------- */
 .main-header {
-  border-bottom: solid 1px #ccc;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -297,6 +303,15 @@ img {
 }
 .main-nav--desktop {
   display: none;
+}
+.logo{
+  max-width: 150px;
+  margin:12px 0;
+}
+.logo img{
+  display: block;
+  width:100%;
+  height:auto;
 }
 @media (max-width: 1024px) {
   .main-header--wrap {
@@ -318,6 +333,9 @@ img {
   }
   .main-nav--toggle {
     cursor: pointer;
+    -webkit-appearance:none;
+    border:none;
+    background:none;
   }
   .main-nav--toggle.active {
     color: white;
@@ -334,7 +352,8 @@ img {
     font-size: 1.5em;
   }
   span.main-nav--link {
-    opacity: 0.5;
+    color:#f16722;
+    font-weight: 700;
   }
 }
 @media (min-width: 1025px) {
@@ -353,14 +372,16 @@ img {
     margin: 0 auto;
   }
   .main-nav--list {
+    margin-bottom: 12px;
   }
   .main-nav--item {
     display: inline-block;
     font-family: Jost, Arial, Helvetica, sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 1em;
+    font-size: 14px;
+    margin: 0 5px;
   }
   .main-nav--link {
     padding: 5px 8px;
@@ -368,13 +389,24 @@ img {
     display: block;
   }
   span.main-nav--link {
-    opacity: 0.5;
+    color:#f16722;
+    font-weight: 700;
+  }
+  .logo{
+    max-width: 240px;
+    margin:12px auto 24px auto;
   }
 }
-.logo {
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 20px;
+
+/* Main body padding
+---------------------------- */
+.main-content > section:not(.hero){
+  padding-top:36px;
+}
+@media(min-width:1025px){
+  .main-content > section:not(.hero){
+    padding-top:48px;
+  }
 }
 
 /* Styles that don't work in components

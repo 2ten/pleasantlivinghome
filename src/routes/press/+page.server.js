@@ -5,7 +5,7 @@ import * as prismic from '@prismicio/client';
 export async function load({ fetch, params, request }) {
   const { uid } = params;
   const client = createClient({ fetch, request });
-  const document = await client.getSingle('press_listing');
+  const document = await client.getByUID('page', 'press');
 
   const press = await client.getByType('press', {
     orderings: {

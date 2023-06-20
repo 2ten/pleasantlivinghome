@@ -23,11 +23,8 @@
   </div>
 </section>
 <style>
-.page-header{
-  padding:50px 0;
-}
 .page-header--image{
-  max-width:320px;
+  max-width:414px;
   margin:0 auto;
 }
 @media(min-width:769px){

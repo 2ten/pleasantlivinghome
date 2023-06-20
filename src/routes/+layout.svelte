@@ -11,11 +11,12 @@ import "@fontsource/epilogue/latin-700.css";
 import '/src/styles/main.css'
 
 $: pathname = data.pathname
+
 </script>
 <div class="page">
-<Header data={data}/>
-<main>
+<Header data={data.main_menu.data}/>
+<main class="main-content">
 <slot />
 </main>
-<Footer data={data}/>
+<Footer data={data.footer_menu.data}/>
 </div>

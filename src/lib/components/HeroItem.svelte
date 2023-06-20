@@ -15,13 +15,14 @@
   {/if}
   <a class="hero-caption--wrap" href="{prismic.asLink(item.link)}">
     <div class="hero-caption">
-      {@html prismic.asHTML(item.heading)}
+      <h1>{@html prismic.asText(item.heading)}</h1>
     </div>
   </a>
 </div>
 <style>
 .hero-item{
   position:relative;
+  margin-bottom: 6px;
 }
 .hero-image{
   aspect-ratio:3/2;
@@ -68,14 +69,10 @@
   margin: 0;
   padding: 1em;
 }
-.hero-caption p {
-  font-size: 1em;
-  margin: 0;
-  padding: 1em;
-}
 @media(min-width:769px){
 	.hero-item{
     flex:0 0 calc(50% - 4px);
+    margin-bottom:0;
 	}
   .hero-image{
     aspect-ratio:unset;

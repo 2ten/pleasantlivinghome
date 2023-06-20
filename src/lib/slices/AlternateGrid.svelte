@@ -4,7 +4,7 @@
   import { useLazyImage as lazyImage } from 'svelte-lazy-image';
   let align = slice.primary.image_side
 
-      //export let d = JSON.stringify(slice,null,2);
+  //export let d = JSON.stringify(slice,null,2);
 
 </script>
   <!-- <pre>{d}</pre> -->
@@ -36,9 +36,11 @@
 .image-container{
   order:1;
   margin:0 auto;
+  width:100%;
 }
 .text-container{
   order:2;
+  padding-top:36px;
 }
 @media(min-width:769px){
   .alternate-grid--container {
@@ -58,6 +60,7 @@
   .text-container {
     flex-basis: calc(50% - 20px);
     margin-left: 20px;
+    padding-top:0;
   }
 }
 .eyebrow-headline {

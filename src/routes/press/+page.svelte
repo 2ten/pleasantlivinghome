@@ -1,11 +1,11 @@
 <script>
   export let data
-  import { dev } from "$app/environment"
 	import * as prismic from '@prismicio/client';
 </script>
 
 <svelte:head>
   <title>{prismic.asText(data?.document?.data?.title)}</title>
+  <meta name="description" content={prismic.asText(data?.document?.data?.description)}>
 </svelte:head>
 
 {#if data && 'press' in data}

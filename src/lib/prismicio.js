@@ -6,11 +6,31 @@ const accessToken = ''; // If your repository is private, add an access token
 // This defines how you will structure URL paths in your project.
 // Update the types to match the Custom Types in your project, and edit
 // the paths to match the folder-based routing in your project.
+
+// 2ten note 
+// /furniture, /interior-design, /press
+// routing those pages to custom folders with their own +page.server.js files
+// before the default page route takes effect
 const routes = [
   {
     type: 'page',
     uid: 'home',
     path: '/',
+  },
+  {
+    type: 'page',
+    uid: 'furniture',
+    path: '/furniture',
+  },
+  {
+    type: 'page',
+    uid: 'interior-design',
+    path: '/interior-design',
+  },
+  {
+    type: 'page',
+    uid: 'press',
+    path: '/press',
   },
   {
     type: 'page',
@@ -21,20 +41,12 @@ const routes = [
     path: '/furniture/:uid',
   },
   {
-    type: 'interior_design_listing',
-    path: '/interior-design',
-  },
-  {
     type: 'project',
     path: '/interior-design/:uid',
   },
   {
     type: 'collection',
-    path: '/collection/:uid',
-  },
-  {
-    type: 'press_listing',
-    path: '/press',
+    path: '/furniture/collection/:uid',
   },
   {
     type: 'press',
