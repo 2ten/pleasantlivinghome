@@ -34,6 +34,11 @@ const routes = [
   },
   {
     type: 'page',
+    uid: 'contact',
+    path: '/contact',
+  },
+  {
+    type: 'page',
     path: '/:uid',
   },
   {
