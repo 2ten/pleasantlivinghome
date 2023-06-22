@@ -3,11 +3,6 @@
 	import * as prismic from '@prismicio/client';
 </script>
 
-<svelte:head>
-  <title>{prismic.asText(data?.document?.data?.title)}</title>
-  <meta name="description" content={prismic.asText(data?.document?.data?.description)}>
-</svelte:head>
-
 {#if data && 'press' in data}
 <section class="press-heading">
   <div class="container container--medium">
@@ -17,13 +12,13 @@
 <section class="press-grid--wrap">
   <div class="container container--medium">
     <div class="press-grid">
-    {#each data.press.results as press}
+    {#each data.press as press}
       <div class="press-grid--item"> 
         <a href="{prismic.asLink(press)}" class="press-grid--link">
         {#if 'image' in press.data && JSON.stringify(press.data.image) != "{}"}
         <img  
-        src={prismic.asImageSrc(press.data.image)}
-        srcset={prismic.asImageWidthSrcSet(press.data.image).srcset} 
+        src={prismic.asImageSrc(press.data.image,{fit:'clip',w:320})}
+        srcset={prismic.asImageWidthSrcSet(press.data.image,{widths: [320,640,828]}).srcset}
         alt={press.data.image.alt} 
         /> 
         {/if}

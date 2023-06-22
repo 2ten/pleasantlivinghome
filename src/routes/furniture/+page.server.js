@@ -10,11 +10,11 @@ export async function load({ fetch, params, request }) {
   const type = 'collection'
 
   const orderings = [{
-    field: 'my.collection.title',
+    field: 'my.collection.order',
     direction: 'asc',
   }]
 
-  const items = await client.getByType(type, {
+  const items = await client.getAllByType(type, {
     orderings: orderings
   });
 

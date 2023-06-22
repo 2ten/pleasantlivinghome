@@ -4,18 +4,13 @@
   import PageBanner from '$lib/components/PageBanner.svelte';
 </script>
 
-<svelte:head>
-  <title>{prismic.asText(data?.document?.data?.title)}</title>
-  <meta name="description" content={prismic.asText(data?.document?.data?.description)}>
-</svelte:head>
-
 {#if data && data.document}
-<PageBanner title={data.document.data.title} description={data.document.data.description} image={data.document.data.image} />
+<PageBanner title={data.document.data.title} description={data.document.data.description} image={data.document.data.image} className="collection-header" />
 {/if}
 {#if data && 'products' in data}
 <div class="container">
   <div class="product-grid">
-    {#each data.products.results as product}
+    {#each data.products as product}
       <div class="product-grid--item"> 
         <a href="{prismic.asLink(product)}" class="product-grid--link">
         {#if 'image' in product.data && JSON.stringify(product.data.image) != "{}"}
@@ -33,12 +28,6 @@
 </div>
 {/if}
 <style>
-.collection-header{
-  padding-bottom:60px;
-}
-.collection-description{
-  border-bottom:solid 1px #f16722;
-}
 .product-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -80,10 +69,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 36px;
     margin:0 0 36px;
-  }
-  .collection-header{
-    width:67%;
-    padding-bottom:100px;
   }
 }
 </style>

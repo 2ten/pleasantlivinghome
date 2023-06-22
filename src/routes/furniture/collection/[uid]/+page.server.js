@@ -10,7 +10,7 @@ export async function load({ fetch, params, request }) {
   // todo - can document.id just be used here or do we need to wait for it
   const filters = [];
   filters[0] = prismic.filter.at('my.furniture.collection', document.id);
-  const products = await client.getByType('furniture', {
+  const products = await client.getAllByType('furniture', {
     filters: filters,
     orderings: {
       field: 'my.furniture.order',

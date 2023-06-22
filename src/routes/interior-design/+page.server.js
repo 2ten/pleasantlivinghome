@@ -14,7 +14,7 @@ export async function load({ fetch, params, request }) {
     direction: 'asc',
   }]
 
-  const items = await client.getByType(type, {
+  const items = await client.getAllByType(type, {
     orderings: orderings
   });
 

@@ -27,6 +27,12 @@
   max-width:414px;
   margin:0 auto;
 }
+.page-header--text{
+  border-bottom:solid 1px #F16722;
+}
+.page-header--image{
+  padding-top:36px;
+}
 @media(min-width:769px){
   .page-header--wrap{
     display:flex;
@@ -36,15 +42,15 @@
   .page-header--text{
     /* doing it this way instead of 1 1 auto in case there is no image like on the collection pages */
     flex:0 0 auto;
-    padding:25px 0;
+    padding:25px 0 0 0;
     margin-left:40px;
     margin-right:75px;
-    border-bottom:solid 1px #F16722;
     width: calc(100% - 415px); /* width of image + marginLeft and marginRight */
   }
   .page-header--image{
     flex:0 0 300px;
     max-width:none;
+    padding-top:0;
   }
   .product .page-header--text{
     width: calc(100% - 515px)

@@ -11,9 +11,10 @@
   {#each slice.items as item, i}
     <div class="image-gallery--item width--{item.image_width}">    
       <img  
-        src={prismic.asImageSrc(item.gallery_image)}
-        srcset={prismic.asImageWidthSrcSet(item.gallery_image).srcset} 
+        src={prismic.asImageSrc(item.gallery_image,{fit:'clip',w:640})}
+        srcset={prismic.asImageWidthSrcSet(item.gallery_image,{widths: [640, 828, 1200, 1980]}).srcset} 
         alt={item.gallery_image.alt} 
+
       />
     </div>
   {/each}
@@ -27,7 +28,7 @@ img{
   flex-wrap:wrap;
 }
 .image-gallery--item{
-  padding:3px 0;
+  padding:0 0 6px 0;
 }
 .image-gallery--item img{
   width:100%;
@@ -35,11 +36,8 @@ img{
   object-fit: cover;
 }
 @media(min-width:769px){
-  .image-gallery{
-    margin:-6px -6px -6px 6px;
-  }
   .image-gallery--item{
-    padding:6px;
+    padding:0 0 6px 6px;
   }
   .width--100{
     width:100%

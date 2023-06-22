@@ -6,11 +6,6 @@
   import Card from '$lib/components/Card.svelte';
 </script>
 
-<svelte:head>
-  <title>{prismic.asText(data?.document?.data?.title)}</title>
-  <meta name="description" content={prismic.asText(data?.document?.data?.description)}>
-</svelte:head>
-
 {#if data && data.document}
 <SliceZone slices={data.document.data.body} {components} />
 {/if}
@@ -18,7 +13,7 @@
 <section class="cards">
   <div class="container">
     <div class="cards-grid">
-    {#each data.items.results as item}
+    {#each data.items as item}
       <Card title={item.data.title} image={item.data.image} link={item}  />
     {/each}
     </div>
