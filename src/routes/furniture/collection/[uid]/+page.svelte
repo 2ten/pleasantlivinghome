@@ -1,74 +1,95 @@
 <script>
   export let data
+	import { SliceZone } from '@prismicio/svelte';
+  import * as components from "$lib/slices"
 	import * as prismic from '@prismicio/client';
-  import PageBanner from '$lib/components/PageBanner.svelte';
+  import Social from '$lib/components/Social.svelte';
 </script>
 
 {#if data && data.document}
-<PageBanner title={data.document.data.title} description={data.document.data.description} image={data.document.data.image} className="collection-header" />
-{/if}
-{#if data && 'products' in data}
-<div class="container">
-  <div class="product-grid">
-    {#each data.products as product}
-      <div class="product-grid--item"> 
-        <a href="{prismic.asLink(product)}" class="product-grid--link">
-        {#if 'image' in product.data && JSON.stringify(product.data.image) != "{}"}
-        <img  
-        src={prismic.asImageSrc(product.data.image)}
-        srcset={prismic.asImageWidthSrcSet(product.data.image).srcset} 
-        alt={product.data.image.alt} 
-        /> 
-        {/if}
-        <h4 class="product-grid--title">{@html prismic.asText(product.data.title)}</h4>
-        </a>
-      </div>
-    {/each}
+<div class="interior-design">
+  <div class="description--column">
+    <hr class="divider--orange" />
+    <h1 class="title">{@html prismic.asText(data.document.data.title)}</h1>
+    <hr class="divider--orange" />
+    <div class="description">
+      {@html prismic.asHTML(data.document.data.description)}
+    </div>
+    <div class="social">
+      <Social />
+    </div>
+    <div class="back"><a class="btn" href="/furniture">Back to Furniture</div>
+  </div>
+  <div class="gallery--column">
+    <SliceZone slices={data.document.data.body} {components} />
   </div>
 </div>
 {/if}
 <style>
-.product-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px;
-  margin:0 0 24px;
+.description--column{
+  background: #f5f5f5;
+  padding:36px 30px;
 }
-.product-grid--item{
-  text-align:center;
-}
-.product-grid--link{
-  display:block;
-}
-.product-grid--link .product-grid--title{
-  display:inline-block;
-  position:relative;
-}
-.product-grid--link .product-grid--title:after{
-  content:'';
-  position: absolute;
-  bottom:0;
-  left:0;
-  right:0;
+hr.divider--orange{
   height:1px;
-  background:black;
-  opacity:0;
-  transition:all 0.5s ease;
+  border:none;
+  border-top:solid 1px #f16722;
+  margin:0;
+  padding:0;
 }
-.product-grid--link:hover .product-grid--title:after{
-  opacity:1;
+.title{
+  font-size:1.5em;
+  font-weight:400;
+  margin:6px 0;
+  padding:2px 6px;
+  background: gray;
+  color:white;
+  display: block;
+  text-align: center;
 }
-.product-grid--link img{
-  transition:opacity 0.5s ease;
+.details{
+  font-size:0.9em;
+  padding-bottom:6px;
 }
-.product-grid--link:hover img{
-  opacity:0.9;
+.details ul{
+  padding:24px 0;
+}
+.details ul li span{
+  display:inline-block;
+  min-width:100px;
+}
+.details ul{
+  margin:0;
+  list-style:none;
+}
+.description{
+  padding-top:24px;
+}
+.social{
+  padding:24px 0;
+  border-top:solid 1px #f16722;
+  border-bottom:solid 1px #f16722;
+}
+.back{
+  padding:24px 0;
 }
 @media(min-width:769px){
-  .product-grid{
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 36px;
-    margin:0 0 36px;
+  .interior-design{
+    display:flex;
+    height:100%;
+  }
+  .description--column{
+    flex:0 0 300px;
+    padding:36px 24px;
+  }
+  .gallery--column{
+    flex:1 1 auto;
+  }
+}
+@media(min-width:1025px){
+  .description--column{
+    flex:0 0 340px;
+    padding:36px 30px;
   }
 }
 </style>

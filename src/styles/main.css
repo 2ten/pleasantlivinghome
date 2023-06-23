@@ -425,19 +425,19 @@ img {
 }
 @media (min-width: 540px) {
   .card-caption h3 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin-bottom: 30px;
   }
 }
 @media (min-width: 769px) {
   .card-caption h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 30px;
   }
 }
 @media (min-width: 1025px) {
   .card-caption h3 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin-bottom: 36px;
   }
 }

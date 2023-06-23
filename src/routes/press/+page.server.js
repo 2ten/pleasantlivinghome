@@ -11,7 +11,7 @@ export async function load({ fetch, params, request }) {
   const press = await client.getAllByType('press', {
     orderings: {
       field: 'document.first_publication_date',
-      direction: 'desc',
+      direction: 'asc',
     },
   });
 

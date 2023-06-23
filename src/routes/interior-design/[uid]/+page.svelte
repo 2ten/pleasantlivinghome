@@ -37,7 +37,7 @@
 {/if}
 <style>
 .description--column{
-  background: #f5f5f5;
+  background: #f0f0f0;
   padding:36px 30px;
 }
 hr.divider--orange{

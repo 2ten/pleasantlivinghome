@@ -36,6 +36,9 @@ img{
   object-fit: cover;
 }
 @media(min-width:769px){
+  .image-gallery{
+    padding-right:6px;
+  }
   .image-gallery--item{
     padding:0 0 6px 6px;
   }
