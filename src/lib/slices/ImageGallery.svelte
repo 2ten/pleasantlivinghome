@@ -1,6 +1,7 @@
 <script>
   export let slice;
 	import * as prismic from '@prismicio/client';
+
 	// set container from slice label
 	let gap = 'gap';
 	if(slice.slice_label){
@@ -13,8 +14,9 @@
       <img  
         src={prismic.asImageSrc(item.gallery_image,{fit:'clip',w:640})}
         srcset={prismic.asImageWidthSrcSet(item.gallery_image,{widths: [640, 828, 1200, 1980]}).srcset} 
+        sizes="(min-width: 769px) {item.image_width}vw,100vw"
         alt={item.gallery_image.alt} 
-
+        loading="lazy"
       />
     </div>
   {/each}

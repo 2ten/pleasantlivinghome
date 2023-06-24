@@ -33,6 +33,11 @@
 .page-header--image{
   padding-top:36px;
 }
+@media(max-width:768px){
+  .page-header--image{
+    display:none;
+  }
+}
 @media(min-width:769px){
   .page-header--wrap{
     display:flex;

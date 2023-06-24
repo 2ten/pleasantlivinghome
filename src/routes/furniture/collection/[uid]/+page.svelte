@@ -38,10 +38,11 @@ hr.divider--orange{
   padding:0;
 }
 .title{
-  font-size:1.5em;
+  font-size:1.2em;
   font-weight:400;
+  line-height:1.2;
   margin:6px 0;
-  padding:2px 6px;
+  padding:12px;
   background: gray;
   color:white;
   display: block;
@@ -90,6 +91,9 @@ hr.divider--orange{
   .description--column{
     flex:0 0 340px;
     padding:36px 30px;
+  }
+  .title{
+    font-size:1.5em;
   }
 }
 </style>
