@@ -315,6 +315,11 @@ img {
   max-width: 150px;
   margin:12px 0;
 }
+.logo a{
+  width:150px;
+  height:93px;
+  display:block;
+}
 .logo img{
   display: block;
   width:100%;
@@ -489,6 +494,10 @@ img {
   .logo{
     max-width: 240px;
     margin:12px auto 24px auto;
+  }
+  .logo a{
+    width:240px;
+    height:148px;
   }
 }
 
