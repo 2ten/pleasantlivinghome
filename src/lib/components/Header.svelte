@@ -8,6 +8,10 @@
 
 	let active = false;
 	$: $page.url && (active = false)
+
+	function nav(){
+		console.log('nav')
+	}
 </script>
 <header class="main-header">
 	<div class="main-header--wrap">
@@ -17,14 +21,11 @@
 		{#if data.items}
 		<button class="main-nav--toggle" 
 			id="menuToggle" 
-			role="button" 
-			aria-expanded="false" 
+			aria-expanded={active ? "true" : "false"} 
 			aria-controls="mainNav" 
-			aria-label="Open navigation and skip to navigation" 
-			data-label-active="Close"
-			data-label="Menu"
+			aria-label={active ? "Close Navigation" : "Open Navigation"} 
 			class:active
-			on:click={() => active = !active} >Menu</button>
+			on:click={() => active = !active} ><hr /><hr /><hr /></button>
 
 			<nav class="main-nav--desktop">
 				<ul class="main-nav--list" role="navigation">
