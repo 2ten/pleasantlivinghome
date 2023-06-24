@@ -3,15 +3,16 @@
 	import * as prismic from '@prismicio/client';
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
-
 	import logo from '$lib/assets/logo-pleasantlivinghome.png';
+	 import { browser } from '$app/environment';
 
 	let active = false;
 	$: $page.url && (active = false)
 
-	function nav(){
-		console.log('nav')
+	$: if(browser){
+		document.body.classList.toggle('noscroll', active);
 	}
+
 </script>
 <header class="main-header">
 	<div class="main-header--wrap">

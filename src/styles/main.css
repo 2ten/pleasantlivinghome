@@ -286,8 +286,9 @@ img {
 /* Mobile menu 
 ---------------------------- */
 @media (max-width: 1023px) {
-  .body-lock {
-    overflow: hidden;
+  .noscroll {
+    position: fixed; 
+    overflow-y:scroll 
   }
 }
 /* Header
