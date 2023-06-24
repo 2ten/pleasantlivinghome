@@ -40,11 +40,16 @@
   aspect-ratio:1;
   order:2;
   flex:0 0 48%;
+  overflow:hidden
 }
 .card-image img{
   width:100%;
   height:100%;
   object-fit:cover;
+  transition: all 1s ease;
+}
+.card-image a:hover img {
+    transform:scale(1.05)
 }
 .card-caption{
   flex:0 0 48%;
