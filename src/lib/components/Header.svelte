@@ -17,7 +17,7 @@
 <header class="main-header">
 	<div class="main-header--wrap">
 		<div class="logo">
-			<a href="/"><img src="{logo}" alt="Pleasant Living Home" /></a>
+			<a href="/"><img src="{logo}" alt="Pleasant Living Home" width="300" height="185" /></a>
 		</div>
 		{#if data.items}
 		<button class="main-nav--toggle" 
