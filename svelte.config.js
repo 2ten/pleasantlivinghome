@@ -12,6 +12,12 @@ export default {
             // instead of creating a single one for the entire app.
             // if `edge` is true, this option cannot be used
             split: false
-        })
+        }),
+        prerender: {
+            crawl: true,
+            enabled: true,
+            force: true,
+            pages: ['*']
+        }
     }
 };
