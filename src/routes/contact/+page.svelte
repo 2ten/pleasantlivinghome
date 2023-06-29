@@ -3,7 +3,6 @@
   import * as components from "$lib/slices";
   import { SliceZone } from "@prismicio/svelte";
 	import * as prismic from '@prismicio/client';
-  export const prerender = true;
 </script>
 
 {#if data && data.document}
