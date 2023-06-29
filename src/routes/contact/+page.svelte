@@ -3,7 +3,6 @@
   import * as components from "$lib/slices";
   import { SliceZone } from "@prismicio/svelte";
 	import * as prismic from '@prismicio/client';
-  export const prerender = true;
 </script>
 
 {#if data && data.document}
@@ -12,6 +11,7 @@
 
 <div class="container container--small">
 <form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
   <p>
     <label>Your Name: <input type="text" name="name" /></label>
   </p>
