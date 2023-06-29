@@ -167,6 +167,7 @@ body {
   font-family: Epilogue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.4;
+  width:100%;
 }
 h1,
 h2,
@@ -452,6 +453,9 @@ img {
   .main-nav--desktop {
     display: block;
     margin: 0 auto;
+  }
+  .main-nav--mobile{
+    display: none;
   }
   .main-nav--list {
     margin-bottom: 12px;

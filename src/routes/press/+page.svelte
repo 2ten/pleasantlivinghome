@@ -33,7 +33,7 @@
 .press-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px;
+  grid-gap: 12px;
   margin:0 0 24px;
 }
 .press-grid--item{
@@ -51,7 +51,7 @@
 @media(min-width:769px){
   .press-grid{
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 36px;
+    grid-gap: 18px;
     margin:0 0 36px;
   }
 }
