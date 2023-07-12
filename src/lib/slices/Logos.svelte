@@ -13,7 +13,6 @@
         <li class="logos-item">    
           <img  
             src={prismic.asImageSrc(item.logo)}
-            srcset={prismic.asImageWidthSrcSet(item.logo).srcset} 
             alt={item.logo.alt} 
           />
         </li>
