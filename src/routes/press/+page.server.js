@@ -10,7 +10,7 @@ export async function load({ fetch, params, request }) {
   // in the template if using getByType must reference data.press.results
   const press = await client.getAllByType('press', {
     orderings: {
-      field: 'document.first_publication_date',
+      field: 'my.press.order',
       direction: 'asc',
     },
   });

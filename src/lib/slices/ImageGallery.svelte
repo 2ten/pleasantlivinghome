@@ -37,6 +37,9 @@ img{
   height:100%;
   object-fit: cover;
 }
+img[alt="spacer"]{
+  display:none!important;
+}
 @media(min-width:769px){
   .image-gallery{
     padding-right:6px;
