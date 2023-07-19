@@ -27,10 +27,6 @@
               <span><svg class="svg-icon " style="fill:currentColor;font-size:1em" viewBox="0 0 20 20" width="1em" height="1em" focusable="false" aria-hidden="true" role="presentation"><path d="M10 8.826l10-3V2.5H0v3.326l10 3z"></path><path d="M10 11.174l-10-3v8.076c0 .69.56 1.25 1.25 1.25h17.5c.69 0 1.25-.56 1.25-1.25V8.174z"></path></svg></span>
               <span class="contact-label"><a href="mailto:{data.settings.data.email.trim()}" target="_blank">{data.settings.data.email.trim()}</a></span>
             </li>
-            <li>
-              <span><svg class="svg-icon" style="fill:currentColor;font-size:1em" viewBox="0 0 20 20" width="1em" height="1em" focusable="false" aria-hidden="true" role="presentation"><path d="M17.5 7.5v-.005c0-4.142-3.358-7.5-7.5-7.5s-7.5 3.358-7.5 7.5c0 3.146 1.937 5.84 4.683 6.953l.05.018L9.999 20l2.766-5.534c2.795-1.131 4.732-3.822 4.734-6.966zM10 4.615c1.593 0 2.885 1.292 2.885 2.885S11.593 10.385 10 10.385c-1.593 0-2.885-1.292-2.885-2.885 0-1.593 1.292-2.885 2.885-2.885z"></path></svg></span>
-              <span class="contact-label"><a href="http://www.google.com/maps/place/{data.settings.data.location.latitude},{data.settings.data.location.longitude}" target="_blank">Our Location</a></span>
-            </li>
           </ul>
         </div>
         <div class="social">
