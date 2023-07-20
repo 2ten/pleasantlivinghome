@@ -5,7 +5,7 @@
 	// set container from slice label
 	let container = 'container'
 	if(slice.slice_label){
-		container += ' container--' + slice.slice_label
+		container += ' container--' + slice.slice_label.toLowerCase()
 	}
 </script>
 
@@ -24,4 +24,8 @@
 		{/if}
 	</div>
 </section>
-	
+<style>
+.section-text{
+	padding-bottom:80px;
+}
+</style>

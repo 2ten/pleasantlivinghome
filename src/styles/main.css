@@ -254,11 +254,10 @@ button{
   /* max-width: 1536px; */
   margin: 0 auto;
 }
-.container--small {
-  max-width: 720px;
-}
+.container--small,
+.container--narrow,
 .container--medium {
-  max-width: 720px;
+  max-width: 720px!important;
 }
 .container--fullscreen {
   max-width: none;

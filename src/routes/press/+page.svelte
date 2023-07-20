@@ -19,7 +19,9 @@
         <img  
         src={prismic.asImageSrc(press.data.image,{fit:'clip',w:320})}
         srcset={prismic.asImageWidthSrcSet(press.data.image,{widths: [320,640,828]}).srcset}
+        sizes="(min-width: 769px) 33vw,50vw"
         alt={press.data.image.alt} 
+        loading="lazy"
         /> 
         {/if}
         </a>

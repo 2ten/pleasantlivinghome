@@ -7,9 +7,9 @@
 <footer class="main-footer">
 	<div class="container">
 		<nav class="footer-menu">
-			{#if data.items}
+			{#if data.footer_menu.data.items}
 			<ul>
-				{#each data.items as item}
+				{#each data.footer_menu.data.items as item}
 					{#if item.link.url}
 						<li><a href={prismic.asLink(item.link)}>
 							{item.name}
@@ -18,7 +18,7 @@
 				{/each}
 			</ul>
 			{/if}
-			<span class="copy">&copy; {date} Pleasant Living Home</span>
+			<span class="copy">&copy; {date} {data.settings.data.company_name.trim()}</span>
 		</nav>
 	</div>
 </footer>

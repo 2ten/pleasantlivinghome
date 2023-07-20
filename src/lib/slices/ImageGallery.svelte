@@ -10,7 +10,7 @@
 </script>
 <div class="image-gallery {gap}">
   {#each slice.items as item, i}
-    <div class="image-gallery--item width--{item.image_width}">    
+    <div class="image-gallery--item width--{item.image_width}" style="aspect-ratio:{item.gallery_image.dimensions.width}/{item.gallery_image.dimensions.height};max-width:{item.gallery_image.dimensions.width}px;">    
       <img  
         src={prismic.asImageSrc(item.gallery_image,{fit:'clip',w:640})}
         srcset={prismic.asImageWidthSrcSet(item.gallery_image,{widths: [640, 828, 1200, 1980]}).srcset} 

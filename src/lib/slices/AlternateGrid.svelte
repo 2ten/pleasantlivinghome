@@ -14,10 +14,11 @@
       {#if 'optional_image' in slice.primary && JSON.stringify(slice.primary.optional_image) != "{}"}
       <div class="image-container" style="aspect-ratio:{slice.primary.optional_image.dimensions.width}/{slice.primary.optional_image.dimensions.height};max-width:{slice.primary.optional_image.dimensions.width}px;">
         <img  
-        data-src={prismic.asImageSrc(slice.primary.optional_image)}
-        data-srcset={prismic.asImageWidthSrcSet(slice.primary.optional_image).srcset} 
-        alt={slice.primary.optional_image.alt} 
-        use:lazyImage
+          src={prismic.asImageSrc(slice.primary.optional_image)}
+          srcset={prismic.asImageWidthSrcSet(slice.primary.optional_image,{widths: [320, 640, 828, 1200]}).srcset} 
+          sizes="(min-width: 769px) 50vw,100vw"
+          alt={slice.primary.optional_image.alt} 
+          loading="lazy"
         />
       </div>
       {/if}
@@ -74,12 +75,3 @@
   margin-bottom: 40px;
 }
 </style>
-
-
-<!-- data: The actual content of the document, which is an object containing several fields.
-title: A list of one or more objects containing the page title, in this case it's just one object with a heading1 type and a text value of "About Us".
-description: A list of one or more objects containing the page description, in this case it's two objects, the first one is a paragraph type with a custom label, and the second one is a normal paragraph type.
-body: A list of one or more objects representing the page body, which is a combination of various content sections.
-The first section is of type "alternate_grid", which includes an eyebrow_headline paragraph, a title heading1, a description paragraph, an optional_image with an associated image, and a image_side property set to "left".
-The second section is of type "call_to_action", which includes an icon_image with an associated image, a title heading1, a paragraph text, a button_link object containing a link_type of "Web" and a url to Google, and a button_label with a text value of "Click here".
-The third section is of type "our_work" and includes an eyebrow_headline paragraph, a title heading1, a description paragraph, and a list of items, where each item represents a project and includes an image with an associated image, a title heading3, and a content paragraph. -->

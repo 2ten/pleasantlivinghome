@@ -31,5 +31,5 @@ $: meta_description = $page.data.document.data.meta_description;
 <main class="main-content">
 <slot />
 </main>
-<Footer data={data.footer_menu.data}/>
+<Footer data={data} />
 </div>

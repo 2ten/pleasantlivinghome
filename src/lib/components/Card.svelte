@@ -10,9 +10,12 @@
       <a href={prismic.asLink(link)}>
       <img  
       src={prismic.asImageSrc(image)}
-      srcset={prismic.asImageWidthSrcSet(image).srcset} 
+      srcset={prismic.asImageWidthSrcSet(image,{widths: [320, 640, 828]}).srcset} 
+      sizes="(min-width: 769px) 25vw,50vw"
       alt={image.alt} 
-      /></a>
+      loading="lazy"
+      />
+      </a>
     </div>
     {/if}
     <div class="card-caption">
