@@ -2,11 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" /> 
     <title>%sveltekit.error.message%</title>
+    <style>
+      body{
+        height: 100vh;
+      }
+      .error-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width:100%;
+        height:100%;
+      }
+      .error-caption{
+        padding:20px;
+        font-family: Helvetica,Arial,sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <h1>My custom error page</h1>
-    <p>Status: %sveltekit.status%</p>
-    <p>Message: %sveltekit.error.message%</p>
+    <div class="error-wrap">
+      <div class="error">
+        <a href="/"><img src="/src/lib/assets/logo-pleasantlivinghome.png" alt="Pleasant Living Home" width="300" height="185" class="error-logo"></a>
+        <div class="error-caption">
+          <p>You've reached this page in error. Please go back or <a href="/">return to the home page</a></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

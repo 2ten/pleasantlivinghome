@@ -7,7 +7,7 @@
 <footer class="main-footer">
 	<div class="container">
 		<nav class="footer-menu">
-			{#if data.footer_menu.data.items}
+			{#if data.footer_menu && data.footer_menu.items}
 			<ul>
 				{#each data.footer_menu.data.items as item}
 					{#if item.link.url}

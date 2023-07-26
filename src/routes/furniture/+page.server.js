@@ -18,12 +18,14 @@ export async function load({ fetch, params, request }) {
     orderings: orderings
   });
 
-  if (document) {
-    return {
-      document,
-      items,
-    };
+  if (!document) {
+    throw error(404, {
+      message: 'Not found',
+    });
   }
 
-  error(404, 'Not found');
+  return {
+    document,
+    items,
+  };
 }

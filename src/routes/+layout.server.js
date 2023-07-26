@@ -9,8 +9,6 @@ export async function load({ fetch, params, request, url }) {
   const settings = await client.getSingle('settings');
   const { pathname } = url
 
-
-  // todo does this need to be wrapped in if
   return { 
     main_menu, 
     footer_menu, 
@@ -18,5 +16,4 @@ export async function load({ fetch, params, request, url }) {
     settings
   };
 
-  error(404, 'Not found');
 }

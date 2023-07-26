@@ -5,9 +5,12 @@ export async function load({ fetch, params, request }) {
   const client = createClient({ fetch, request });
   const document = await client.getByUID('page', 'home');
 
-  if (document) {
-    return { document };
+
+  if (!document) {
+    throw error(404, {
+      message: 'Not found',
+    });
   }
 
-  error(404, 'Not found');
+  return { document };
 }
