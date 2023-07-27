@@ -2,8 +2,6 @@
 	export let data;
 	import * as prismic from '@prismicio/client';
 	export let date = new Date().getFullYear();
-
-	console.log(data)
 </script>
 
 <footer class="main-footer">

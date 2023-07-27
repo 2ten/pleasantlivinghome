@@ -1,7 +1,8 @@
 import * as prismic from '@prismicio/client';
+import { ACCESS_TOKEN } from '$env/static/private';
 
 const repoName = 'pleasantlivinghome'; // Fill in your repository name
-const accessToken = ''; // If your repository is private, add an access token
+const accessToken = ACCESS_TOKEN; // If your repository is private, add an access token
 
 // This defines how you will structure URL paths in your project.
 // Update the types to match the Custom Types in your project, and edit
