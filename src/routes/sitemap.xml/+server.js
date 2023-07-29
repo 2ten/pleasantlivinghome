@@ -35,7 +35,7 @@ export async function GET({ fetch, setHeaders, request }) {
         pageSize: 100
       });
 
-    const pageEntries = pages.results.map((page) => create_entry(domain,page.url,page.last_publication_date));
+    const pageEntries = pages.results.map((page) => create_entry(domain,page.url,page.last_publication_date.split('T')[0]));
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
