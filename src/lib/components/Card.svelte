@@ -7,7 +7,7 @@
   <div class="card-body">
     {#if image  && JSON.stringify(image) != "{}"}
     <div class="card-image">
-      <a href={prismic.asLink(link)}>
+      <a href={prismic.asLink(link)} aria-label="View gallery">
       <img  
       src={prismic.asImageSrc(image)}
       srcset={prismic.asImageWidthSrcSet(image,{widths: [320, 640, 828]}).srcset} 
@@ -19,8 +19,8 @@
     </div>
     {/if}
     <div class="card-caption">
-      <a href={prismic.asLink(link)}><h3>{@html prismic.asText(title)}</h3></a>
-      <a href={prismic.asLink(link)} class="btn">View Gallery</a>
+      <a href={prismic.asLink(link)} aria-label="View gallery"><h3>{@html prismic.asText(title)}</h3></a>
+      <a href={prismic.asLink(link)} class="btn" aria-label="View gallery">View Gallery</a>
     </div>
   </div>
 </div>
