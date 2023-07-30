@@ -14,6 +14,8 @@
           <img  
             src={prismic.asImageSrc(item.logo)}
             alt={item.logo.alt} 
+            width={item.logo.dimensions.width}
+            height={item.logo.dimensions.height}
           />
         </li>
       {/each}
