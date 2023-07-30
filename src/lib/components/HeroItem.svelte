@@ -11,7 +11,6 @@
     srcset={prismic.asImageWidthSrcSet(item.image,{widths: [320, 640, 828, 1200]}).srcset} 
     sizes="(min-width: 769px) 50vw,100vw"
     alt={item.image.alt} 
-    loading="lazy"
     />
   </div>
   {/if}
