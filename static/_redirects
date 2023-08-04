@@ -1,4 +1,8 @@
 # Redirects from what the browser requests to what we serve
+http://www.shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
+https://www.shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
+http://shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
+https://shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
 /home			/
 /index.html		/
 /contact.html	/contact
