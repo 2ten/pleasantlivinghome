@@ -1,30 +1,34 @@
 # Redirects from what the browser requests to what we serve
 
 # Press
-https://www.shavermelahn.com/furniture/press/ 	https://www.pleasantlivinghome.com/press 301!
-http://www.shavermelahn.com/furniture/press/ 	https://www.pleasantlivinghome.com/press 301!
+https://www.shavermelahn.com/furniture/press/ 			https://www.pleasantlivinghome.com/press 301!
+http://www.shavermelahn.com/furniture/press/ 			https://www.pleasantlivinghome.com/press 301!
 https://www.shavermelahn.com/interior-design/press/ 	https://www.pleasantlivinghome.com/press 301!
-http://www.shavermelahn.com/interior-design/press/ 	https://www.pleasantlivinghome.com/press 301!
+http://www.shavermelahn.com/interior-design/press/ 		https://www.pleasantlivinghome.com/press 301!
 
-# Furniture
+# Contact
+https://www.shavermelahn.com/interior-design/contact-2/	https://www.pleasantlivinghome.com/contact 301!
+http://www.shavermelahn.com/interior-design/contact-2/ 	https://www.pleasantlivinghome.com/contact 301!
+https://www.shavermelahn.com/furniture/contact/ 		https://www.pleasantlivinghome.com/contact 301!
+http://www.shavermelahn.com/furniture/contact/ 			https://www.pleasantlivinghome.com/contact 301!
+
+# About
+https://www.shavermelahn.com/interior-design/about/	https://www.pleasantlivinghome.com/about 301!
+http://www.shavermelahn.com/interior-design/about/	https://www.pleasantlivinghome.com/about 301!
+
+# Furniture Specific
 https://www.shavermelahn.com/furniture/shavermelahn-classics/	https://www.pleasantlivinghome.com/furniture/collection/shaver-melahn-classic-collection 301!
 http://www.shavermelahn.com/furniture/shavermelahn-classics/	https://www.pleasantlivinghome.com/furniture/collection/shaver-melahn-classic-collection 301!
 https://www.shavermelahn.com/furniture/category/casegoods-mendota/	https://www.pleasantlivinghome.com/furniture/collection/mendota-collection 301!
 http://www.shavermelahn.com/furniture/category/casegoods-mendota/	https://www.pleasantlivinghome.com/furniture/collection/mendota-collection 301!
 https://www.shavermelahn.com/furniture/mendota-collection/	https://www.pleasantlivinghome.com/furniture/collection/mendota-collection 301!
 http://www.shavermelahn.com/furniture/mendota-collection/	https://www.pleasantlivinghome.com/furniture/collection/mendota-collection 301!
-https://www.shavermelahn.com/furniture/		https://www.pleasantlivinghome.com/furniture 301!
-http://www.shavermelahn.com/furniture/		https://www.pleasantlivinghome.com/furniture 301!
-https://www.shavermelahn.com/furniture/*	https://www.pleasantlivinghome.com/furniture 301!
-http://www.shavermelahn.com/furniture/*		https://www.pleasantlivinghome.com/furniture 301!
 
-# About
-https://www.shavermelahn.com/interior-design/about/	https://www.pleasantlivinghome.com/about 301!
-http://www.shavermelahn.com/interior-design/about/	https://www.pleasantlivinghome.com/about 301!
-
-# Interior Design
+# Interior Design & Furniture Catch all
 https://www.shavermelahn.com/interior-design/*	https://www.pleasantlivinghome.com/interior-design 301!
 http://www.shavermelahn.com/interior-design/*	https://www.pleasantlivinghome.com/interior-design 301!
+https://www.shavermelahn.com/furniture/*		https://www.pleasantlivinghome.com/furniture 301!
+http://www.shavermelahn.com/furniture/*			https://www.pleasantlivinghome.com/furniture 301!
 
 # Catch all for domain
 http://www.shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
@@ -32,11 +36,9 @@ https://www.shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
 http://shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
 https://shavermelahn.com/* https://www.pleasantlivinghome.com/ 301!
 
-
-/home			/
-/index.html		/
-/contact.html	/contact
-/about.html		/about
+/home						/
+/index.html					/
+/contact.html				/contact
+/about.html					/about
 /interior-design.html		/interior-design
-/furniture.html		/furniture
-/press		/press
+/furniture.html				/furniture
